@@ -23,3 +23,13 @@ Se definieron dos secuencias discretas basadas en datos personales:
 
 Sistema:
 `h[n] = {5,6,0,0,9,3,8}`
+
+Señal de entrada:
+`x[n]={1,0,2,8,4,8,4,0,3,4}`
+
+La convolución entre ambas señales se define como:
+`y[n]=x[n]∗h[n]`
+
+Implementación en Python:
+
+Se utilizó la función `numpy.convolve()` para calcular la convolución de manera automática.
