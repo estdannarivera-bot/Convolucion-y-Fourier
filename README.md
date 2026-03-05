@@ -18,7 +18,7 @@ En el procesamiento digital de señales, herramientas matemáticas como la convo
 
 Estas técnicas son ampliamente utilizadas en el análisis de señales biomédicas, procesamiento de audio, imágenes y sistemas de comunicación.
 ## Parte A
-### Definición de señales
+**Definición de señales**
 Se definieron dos secuencias discretas basadas en datos personales:
 
 Sistema:
@@ -30,7 +30,7 @@ Señal de entrada:
 La convolución entre ambas señales se define como:
 `y[n]=x[n]∗h[n]`
 
-Implementación en Python:
+**Implementación en Python:**
 
 Se utilizó la función `numpy.convolve()` para calcular la convolución de manera automática.
 
@@ -45,3 +45,12 @@ El código realiza:
 ```python
 y = np.convolve(x, h)
 ```
+**Resultado:**
+El resultado de la convolución corresponde a una nueva secuencia cuya longitud es:
+
+`Ny​ = Nx​+Nh​−1`
+
+Esta señal representa la respuesta del sistema `h[n]` cuando se aplica la señal `x[n]` como entrada.
+La gráfica generada mediante `matplotlib` permite visualizar la amplitud de cada muestra de la señal resultante.
+
+
