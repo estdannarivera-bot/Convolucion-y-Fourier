@@ -96,7 +96,7 @@ detección de patrones, sincronización de señales, análisis de señales biom�
 
 **Resultados**
 
-![CORRELACION CRUZADA](Convolucion.png)
+![CORRELACION CRUZADA](CorrelacionCruzada.png)
 
 
 
