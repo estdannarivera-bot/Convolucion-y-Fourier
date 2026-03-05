@@ -294,5 +294,3 @@ En este laboratorio se aplicaron herramientas fundamentales del procesamiento di
 La convolución permitió analizar la respuesta de un sistema discreto ante una señal de entrada, mientras que la correlación cruzada permitió evaluar la similitud entre señales con diferentes desfases.
 
 Finalmente, el análisis de una señal biológica mediante la Transformada de Fourier permitió observar que su contenido energético se concentra principalmente en bajas frecuencias, lo cual es característico de señales EOG.
-
-Esto indica que la mayor parte de la energía de la señal se concentra en frecuencias bajas, característica típica de señales EOG.
