@@ -25,11 +25,22 @@ Estas técnicas son ampliamente utilizadas en el análisis de señales biomédic
 
 Se definieron dos secuencias discretas basadas en datos personales:
 
-Sistema:
+*Estudiante 1:*
+
+- Sistema:
 `h[n] = {5,6,0,0,9,3,8}`
 
-Señal de entrada:
+- Señal de entrada:
 `x[n]={1,0,2,8,4,8,4,0,3,4}`
+
+
+*Estudiante 2:*
+
+-Sistema:
+`h[n] = {5,6,0,0,8,8,8}`
+
+-Señal de entrada:
+`x[n]={1,0,7,7,2,2,7,2,5,5}`
 
 La convolución entre ambas señales se define como:
 `y[n]=x[n]∗h[n]`
@@ -58,7 +69,7 @@ Esta señal representa la respuesta del sistema `h[n]` cuando se aplica la seña
 Las gráficas generada mediante `matplotlib` permite visualizar la amplitud de cada muestra de la señal resultante.
 
 
-*Estudinate 1:*
+*Estudiante 1:*
 
 ![CONVOLUCIÓN](Convolucion.png)
 
