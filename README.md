@@ -63,6 +63,7 @@ Las gráficas generada mediante `matplotlib` permite visualizar la amplitud de c
 
 *Estudiante 2:*
 
+![CONVOLUCIÓN](Convolucion2.png)
 
 ---
 ## Parte B – Correlación Cruzada
