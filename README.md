@@ -36,10 +36,10 @@ Se definieron dos secuencias discretas basadas en datos personales:
 
 *Estudiante 2:*
 
--Sistema:
+- Sistema:
 `h[n] = {5,6,0,0,8,8,8}`
 
--Señal de entrada:
+- Señal de entrada:
 `x[n]={1,0,7,7,2,2,7,2,5,5}`
 
 La convolución entre ambas señales se define como:
