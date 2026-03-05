@@ -22,6 +22,7 @@ Estas técnicas son ampliamente utilizadas en el análisis de señales biomédic
 
 ## Parte A – Convolución de Señales Discretas
 **Definición de señales**
+
 Se definieron dos secuencias discretas basadas en datos personales:
 
 Sistema:
