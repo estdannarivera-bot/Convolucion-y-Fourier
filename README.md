@@ -33,3 +33,15 @@ La convolución entre ambas señales se define como:
 Implementación en Python:
 
 Se utilizó la función `numpy.convolve()` para calcular la convolución de manera automática.
+
+El código realiza:
+
+1. Definición de las secuencias discretas.
+
+2. Cálculo de la convolución.
+
+3. Visualización gráfica del resultado.
+
+```python
+y = np.convolve(x, h)
+```
