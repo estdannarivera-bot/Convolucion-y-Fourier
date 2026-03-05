@@ -98,5 +98,7 @@ detección de patrones, sincronización de señales, análisis de señales biom�
 
 ![CORRELACION CRUZADA](CorrelacionCruzada.png)
 
+---
+## Parte C – Análisis de Señal Biológica
 
 
