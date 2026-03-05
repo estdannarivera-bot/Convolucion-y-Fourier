@@ -208,7 +208,7 @@ Para caracterizar la señal se obtuvieron los siguientes parámetros estadístic
 
 Estos valores indican que la señal presenta variaciones amplias en amplitud, lo cual es común en señales electrooculográficas debido al movimiento ocular.
 
-## Transformada de Fpurier
+## Transformada de Fourier
 
 Para analizar el contenido frecuencial de la señal se aplicó la representación en python de la **Transformada Discreta de Fourier:**
 
