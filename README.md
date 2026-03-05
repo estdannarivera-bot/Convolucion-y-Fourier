@@ -182,7 +182,21 @@ La señal filtrada se muestra a continuación:
 
 ![SEÑAL EOG](SeñalEOG.png)
 
-**Estadísticos en el dominio del tiempo**
+## Clasificación de la señal
+
+### Según su naturaleza
+
+La señal se clasifica como aleatoria, ya que proviene de procesos fisiológicos asociados al movimiento ocular. Estos procesos dependen del comportamiento de la persona y no siguen un patrón completamente predecible.
+
+### Según su periodicidad 
+
+Se considera aperiódica, debido a que los movimientos oculares no presentan un patrón repetitivo constante en el tiempo.
+
+### Según su tipo
+
+Aunque la señal original es analógica, después de ser adquirida por el microcontrolador y convertida mediante el ADC, se transforma en una señal digital que puede ser procesada mediante algoritmos computacionales.
+
+## Estadísticos en el dominio del tiempo
 
 Para caracterizar la señal se obtuvieron los siguientes parámetros estadísticos:
 
@@ -240,5 +254,45 @@ Los resultados obtenidos fueron:
 - Frecuencia media: 2.94 Hz
 - Frecuencia mediana: 2.0 Hz
 - Desviación estándar: 5.21 Hz
+
+---
+
+## Discusión
+
+### ¿Qué utilidad tienen la convolución y la correlación en el procesamiento de imágenes?
+
+La convolución se utiliza para aplicar filtros que permiten mejorar la calidad de las imágenes, eliminar ruido o detectar bordes. La correlación se utiliza para identificar patrones u objetos dentro de una imagen mediante la comparación con una referencia.
+
+### ¿Cuándo es más útil la Transformada de Fourier que el análisis temporal?
+
+La Transformada de Fourier es más útil cuando se desea identificar las frecuencias presentes en una señal, lo cual es importante en señales biomédicas, audio o comunicaciones donde el contenido frecuencial es relevante.
+
+### ¿En qué se diferencia la correlación de la convolución?
+
+La principal diferencia es que en la convolución una señal se invierte antes de realizar la operación, mientras que en la correlación se comparan directamente las señales para medir su similitud.
+
+---
+
+## Análisis de resultados
+
+### Convolución y correlación
+
+La convolución permite analizar cómo un sistema responde a una señal de entrada y se utiliza comúnmente para implementar filtros digitales. Por su parte, la correlación permite medir la similitud entre dos señales y detectar posibles desfases temporales entre ellas.
+
+Sin embargo, ambas técnicas pueden verse afectadas por el ruido presente en las señales y el esfuerzo computacional puede aumentar cuando se trabaja con señales de gran tamaño.
+
+### Transformada de Fourier
+
+La Transformada de Fourier permite analizar una señal en el dominio de la frecuencia e identificar las componentes frecuenciales presentes. En el caso de la señal EOG analizada, se observa que la mayor parte de la energía se concentra en frecuencias bajas. No obstante, esta herramienta no muestra cómo cambian las frecuencias en el tiempo, lo que puede limitar su uso en aplicaciones más avanzadas.
+
+---
+
+## Conclusiones 
+
+En este laboratorio se aplicaron herramientas fundamentales del procesamiento digital de señales como la convolución, la correlación y la Transformada de Fourier.
+
+La convolución permitió analizar la respuesta de un sistema discreto ante una señal de entrada, mientras que la correlación cruzada permitió evaluar la similitud entre señales con diferentes desfases.
+
+Finalmente, el análisis de una señal biológica mediante la Transformada de Fourier permitió observar que su contenido energético se concentra principalmente en bajas frecuencias, lo cual es característico de señales EOG.
 
 Esto indica que la mayor parte de la energía de la señal se concentra en frecuencias bajas, característica típica de señales EOG.
