@@ -242,4 +242,3 @@ Los resultados obtenidos fueron:
 - Desviación estándar: 5.21 Hz
 
 Esto indica que la mayor parte de la energía de la señal se concentra en frecuencias bajas, característica típica de señales EOG.
--
