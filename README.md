@@ -1,4 +1,4 @@
-# Laboratorio 1  
+# Laboratorio 2  
 ## Convolución, correlación y transformada de Fourier
 
 **Programa:** Ingeniería Biomédica  
