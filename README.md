@@ -7,6 +7,8 @@
 **Estudiantes:** Danna Rivera, Duvan Paez
 
 ---
+![ALGORITMO](ALGORITMO.png)
+
 # Introducción
 En el procesamiento digital de señales, herramientas matemáticas como la convolución, la correlación y la Transformada de Fourier permiten analizar, caracterizar y comparar señales discretas.
 
@@ -52,9 +54,15 @@ El resultado de la convolución corresponde a una nueva secuencia cuya longitud 
 `Ny​ = Nx​+Nh​−1`
 
 Esta señal representa la respuesta del sistema `h[n]` cuando se aplica la señal `x[n]` como entrada.
-La gráfica generada mediante `matplotlib` permite visualizar la amplitud de cada muestra de la señal resultante.
+Las gráficas generada mediante `matplotlib` permite visualizar la amplitud de cada muestra de la señal resultante.
+
+
+*Estudinate 1:*
 
 ![CONVOLUCIÓN](Convolucion.png)
+
+*Estudiante 2:*
+
 
 ---
 ## Parte B – Correlación Cruzada
@@ -97,6 +105,13 @@ detección de patrones, sincronización de señales, análisis de señales biom�
 **Resultados**
 
 ![CORRELACION CRUZADA](CorrelacionCruzada.png)
+
+**¿En qué situaciones resulta útil aplicar la correlación cruzada en el procesamiento digital de señales?**
+
+
+En el procesamiento digital de señales, la correlación cruzada resulta útil cuando se desea medir el grado de similitud entre dos señales y determinar el desfase temporal entre ellas. Esta herramienta permite identificar si dos señales tienen patrones similares y en qué momento una señal coincide con la otra.
+
+En aplicaciones prácticas, la correlación cruzada se utiliza en detección de patrones, sincronización de señales, localización de eventos en señales biomédicas, y procesamiento de audio o comunicaciones. Por ejemplo, en señales biomédicas como EEG o EOG, permite comparar señales registradas en distintos momentos o sensores para identificar actividad similar o retrasos entre ellas. También es útil para detectar la presencia de una señal conocida dentro de otra señal con ruido, facilitando el análisis y la interpretación de datos.
 
 ---
 ## Parte C – Análisis de Señal Biológica
