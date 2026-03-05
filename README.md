@@ -180,9 +180,66 @@ Este filtro permite suavizar la señal del ruido producido en su captura.
 
 La señal filtrada se muestra a continuación: 
 
+![SEÑAL EOG](SeñalEOG.png)
 
+**Estadísticos en el dominio del tiempo**
 
+Para caracterizar la señal se obtuvieron los siguientes parámetros estadísticos:
 
+- Media: -0.01949 mV
+- Mediana: -5.8445 mV
+- Desviación estándar: 154.436 mV
+- Máximo: 502.2507 mV
+- Mínimo: -451.0826 mV
 
+Estos valores indican que la señal presenta variaciones amplias en amplitud, lo cual es común en señales electrooculográficas debido al movimiento ocular.
 
+## Transformada de Fpurier
 
+Para analizar el contenido frecuencial de la señal se aplicó la representación en python de la **Transformada Discreta de Fourier:**
+
+```python
+X = np.fft.fft(senal_filtrada)/N
+frecuencias = np.fft.fftfreq(N,1/FS)
+pos = frecuencias >= 0
+frecuencias = frecuencias[pos]
+X = X[pos]
+magnitud = np.abs(X)
+```
+Obteniendo la siguiente gráfica:
+
+![FFT EOG](FFT_EOG.png)
+
+## Densidad espectral de potencia
+
+La densidad espectral de potencia (PSD) permite observar cómo se distribuye la energía de la señal en función de la frecuencia.
+
+```python
+PSD = np.abs(X)**2
+```
+![PSD EOG](PSD_EOG.png)
+
+## Histograma de frecuencias
+
+Se construyó un histograma ponderado por potencia para observar la distribución de energía en el espectro.
+
+![Histograma](Hist_EOG.png)
+
+## Estadísticos en el dominio de la frecuencia
+
+Se calcularon siguientes parámetros estadísticos del espectro:
+
+```python
+f_media = np.sum(frecuencias*PSD)/np.sum(PSD)
+cumsum = np.cumsum(PSD)
+f_mediana = frecuencias[np.where(cumsum>=cumsum[-1]/2)[0][0]]
+f_std = np.sqrt(np.sum(((frecuencias-f_media)**2)*PSD)/np.sum(PSD))
+```
+Los resultados obtenidos fueron:
+
+- Frecuencia media: 2.94 Hz
+- Frecuencia mediana: 2.0 Hz
+- Desviación estándar: 5.21 Hz
+
+Esto indica que la mayor parte de la energía de la señal se concentra en frecuencias bajas, característica típica de señales EOG.
+-
