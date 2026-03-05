@@ -6,20 +6,41 @@ print("***PARTE A***")
 # PARTE A - CONVOLUCIÓN
 
 # Datos personales
+#primer estudiante
 h = np.array([5,6,0,0,9,3,8])            # Código 5600938
 x = np.array([1,0,2,8,4,8,4,0,3,4])      # Cédula 1028484034
 
+#segundo estudinate
+h1 =np.array([5,6,0,0,8,8,8]) 
+x1 = np.array([1,0,7,7,2,2,7,2,5,5])  
+
 # Convolución
+
 y = np.convolve(x, h)
 
 print("h[n] =", h)
 print("x[n] =", x)
 print("y[n] (convolución) =", y)
 
-# Gráfica convolución
+y1 = np.convolve(x1, h1)
+
+print("h[n] =", h1)
+print("x[n] =", x1)
+print("y[n] (convolución) =", y1)
+
+# Gráfica convolución primer estudiante
 plt.figure()
 plt.stem(y)
 plt.title("Convolución y[n]")
+plt.xlabel("n")
+plt.ylabel("Amplitud")
+plt.grid()
+plt.show()
+
+# Gráfica convolución segundo estudiante
+plt.figure()
+plt.stem(y1)
+plt.title("Convolución y1[n]")
 plt.xlabel("n")
 plt.ylabel("Amplitud")
 plt.grid()
@@ -55,4 +76,5 @@ plt.title("Correlación Cruzada")
 plt.xlabel("Retardo")
 plt.ylabel("Amplitud")
 plt.grid()
+
 plt.show()
