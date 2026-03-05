@@ -18,3 +18,8 @@ En el procesamiento digital de señales, herramientas matemáticas como la convo
 
 Estas técnicas son ampliamente utilizadas en el análisis de señales biomédicas, procesamiento de audio, imágenes y sistemas de comunicación.
 ## Parte A
+### Definición de señales
+Se definieron dos secuencias discretas basadas en datos personales:
+
+Sistema:
+`h[n] = {5,6,0,0,9,3,8}`
