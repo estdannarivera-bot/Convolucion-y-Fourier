@@ -129,4 +129,60 @@ En aplicaciones prácticas, la correlación cruzada se utiliza en detección de 
 ---
 ## Parte C – Análisis de Señal Biológica
 
+En esta sección se analizó una señal biológica obtenida mediante un generador de señales, La señal fue digitalizada utilizando un microcontrolador con convertidor analógico–digital (ADC) y posteriormente procesada en Python para analizar su comportamiento en el dominio del tiempo y de la frecuencia.
+
+## Adquisición de la señal
+
+El programa permite adquirir la señal de dos maneras:
+
+- Lectura desde el puerto serial (microcontrolador).
+- Carga desde archivo de texto previamente guardado.
+
+El siguiente código define los parámetros del sistema de adquisición.
+
+```python
+# MODO puede ser:
+# "serial"  -> Captura desde microcontrolador
+# "archivo" -> Carga datos desde archivo
+MODO = "archivo"
+PORT = 'COM4'
+FS = 200          # Frecuencia de muestreo (Hz)
+TIEMPO = 10       # Duración de captura (s)
+N = FS * TIEMPO   # Número de muestras
+```
+En este bloque se deifne:
+
+- Frecuencia de muestreo
+- Tiempo de adquisición
+- Puerto serial
+
+## Lectura de la señal
+
+Si el modo seleccionado es serial, el sistema lee los datos provenientes del microcontrolador, con la finalidad de convertir los valores en voltaje y guardar los datos en un archivo de texto para su análisis posterior.
+
+Mientras que si el modo seleccionado es archivo, se abrira una señal guardada en formato de texto e indicada en la siguiente línea de código:
+
+```python
+ARCHIVO = "EOG.txt" # Archivo donde se guarda o carga la señal
+```
+
+## Filtro de la señal
+
+Se aplica un filtro simple utilizando convolución:
+
+```python
+h = np.array([0.5,0.5])
+senal_filtrada = np.convolve(senal_centrada,h,mode='same')
+```
+Este filtro permite suavizar la señal del ruido producido en su captura.
+
+## Señal en el dominio del tiempo
+
+La señal filtrada se muestra a continuación: 
+
+
+
+
+
+
 
