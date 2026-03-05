@@ -17,7 +17,8 @@ En el procesamiento digital de señales, herramientas matemáticas como la convo
 -La Transformada de Fourier permite analizar una señal en el dominio de la frecuencia, identificando sus componentes espectrales.
 
 Estas técnicas son ampliamente utilizadas en el análisis de señales biomédicas, procesamiento de audio, imágenes y sistemas de comunicación.
-## Parte A
+
+## Parte A – Convolución de Señales Discretas
 **Definición de señales**
 Se definieron dos secuencias discretas basadas en datos personales:
 
@@ -52,5 +53,50 @@ El resultado de la convolución corresponde a una nueva secuencia cuya longitud 
 
 Esta señal representa la respuesta del sistema `h[n]` cuando se aplica la señal `x[n]` como entrada.
 La gráfica generada mediante `matplotlib` permite visualizar la amplitud de cada muestra de la señal resultante.
+
+![CONVOLUCIÓN](Convolucion.png)
+
+---
+## Parte B – Correlación Cruzada
+**Definición de señales**
+
+Se definieron dos señales sinusoidales discretas:
+
+`x₁[nTₛ] = cos(2π · 100 · nTₛ)`
+
+`x₂[nTₛ] = sin(2π · 100 · nTₛ)`
+
+donde: 
+`Tₛ=1.25ms`
+y:
+`0≤n<9`
+
+
+**Implementación en Python**
+
+La correlación cruzada se calculó utilizando:
+
+```python
+r = np.correlate(x1, x2, mode='full')
+```
+
+El parámetro `mode='full'` permite obtener todos los retardos posibles entre ambas señales.
+También se calculó el vector de retardos:
+
+```python
+lags = np.arange(-len(x1)+1, len(x1))
+```
+**Interpretación**
+
+La correlación cruzada permite medir el grado de similitud entre dos señales dependiendo de su desfase temporal. En este caso, las señales seno y coseno tienen un desfase de 90°, por lo tanto, la correlación presenta valores característicos que reflejan ese desplazamiento entre ambas señales.
+
+Esta técnica se utiliza en:
+
+detección de patrones, sincronización de señales, análisis de señales biomédicas, procesamiento de imágenes
+
+**Resultados**
+
+![CORRELACION CRUZADA](Convolucion.png)
+
 
 
